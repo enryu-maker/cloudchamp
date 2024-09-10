@@ -5,8 +5,12 @@ import { Grid } from "../Components/Grid";
 function Home() {
   return (
     <div className="w-full h-full">
-      <Hero />
-      <Grid />
+      <div id="home">
+        <Hero />
+      </div>
+      <div id="about">
+        <Grid />
+      </div>
     </div>
   );
 }

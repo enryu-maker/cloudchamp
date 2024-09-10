@@ -25,7 +25,10 @@ export const Grid = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-100 px-4 py-12 text-bluetheme">
+    <div
+      id="about"
+      className="min-h-screen bg-slate-100 px-4 py-12 text-bluetheme"
+    >
       <motion.div
         ref={sectionRef}
         initial="initial"
