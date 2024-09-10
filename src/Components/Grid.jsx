@@ -5,19 +5,31 @@ import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
 import { SiGithub, SiTiktok, SiTwitter, SiYoutube } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
-
+import { useEffect, useState } from "react";
 import { useInView } from "../UI/UseInView";
 import { images } from "../Images/Images";
 export const Grid = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the width as per your mobile breakpoint
+    };
+
+    handleResize(); // Check on component mount
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="min-h-screen bg-slate-100 px-4 py-12 text-bluetheme">
       <motion.div
         ref={sectionRef}
         initial="initial"
-        animate={isInView ? "animate" : "animate"}
+        animate={isInView ? "animate" : isMobile ? "animate" : ""}
         transition={{
           staggerChildren: 0.05,
         }}

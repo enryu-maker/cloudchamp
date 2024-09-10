@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight } from "react-icons/fi";
 import { useInView } from "../UI/UseInView";
-
+import { Link } from "react-router-dom";
 const Hero = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef);
@@ -92,7 +92,7 @@ const SocialsBlock = () => (
     </Block>
     <Block className="col-span-6 md:col-span-3 bg-indigo-700 shadow-lg p-4">
       <a
-        href=""
+        href="services"
         className="grid h-full place-content-center text-lg md:text-3xl  text-white"
       >
         <p className="italic font-medium">Services</p>
