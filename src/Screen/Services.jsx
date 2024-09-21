@@ -4,7 +4,7 @@ import { images } from "../Images/Images";
 import { motion } from "framer-motion";
 function Services() {
   return (
-    <div className="h-full w-screen bg-slate-800 p-10 px-4">
+    <div className="h-full w-screen bg-black p-10 px-4">
       <motion.div className="flex items-center h-full w-full gap-5 justify-evenly flex-wrap p-4">
         <Card
           image={images.hosting}

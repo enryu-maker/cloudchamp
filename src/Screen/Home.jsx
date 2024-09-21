@@ -4,7 +4,7 @@ import { Grid } from "../Components/Grid";
 
 function Home() {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full -mt-14">
       <div id="home">
         <Hero />
       </div>

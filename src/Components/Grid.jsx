@@ -25,10 +25,7 @@ export const Grid = () => {
   }, []);
 
   return (
-    <div
-      id="about"
-      className="min-h-screen bg-slate-100 px-4 py-12 text-bluetheme"
-    >
+    <div id="about" className="min-h-screen bg-white px-4 py-12 text-bluetheme">
       <motion.div
         ref={sectionRef}
         initial="initial"
@@ -69,7 +66,7 @@ const Block = ({ className, ...rest }) => {
         stiffness: 400,
         damping: 50,
       }}
-      className={twMerge("col-span-4 rounded-lg bg-blue-50 p-6", className)}
+      className={twMerge("col-span-4 rounded-lg bg-white p-6", className)}
       {...rest}
     />
   );
@@ -79,7 +76,7 @@ const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6 py-6 shadow-lg">
     <img src={""} alt="avatar" className="mb-4 size-14 rounded-full shadow" />
     <h1 className="mb-12 text-4xl font-medium leading-tight text-bluetheme">
-      Hi, I'm Nasi.&nbsp;
+      Hi, I'm Nazi.&nbsp;
       <span className="text-zinc-400">Cloud and DevOps expert</span>
     </h1>
     <a href="" className="flex items-center gap-1 text-red-300 hover:underline">

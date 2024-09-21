@@ -5,7 +5,7 @@ import { BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 
 export function Foter() {
   return (
-    <Footer container className="bg-slate-100 border-t-2">
+    <Footer container className="bg-white border-t border-black rounded-none">
       <div className="w-full">
         <div className="flex w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div className="gap-1 flex justify-center sm:mt-4 sm:gap-6">
@@ -23,9 +23,9 @@ export function Foter() {
           <div>
             <Footer.Brand
               href="https://flowbite.com"
-              src="https://flowbite.com/docs/images/logo.svg"
-              alt="Flowbite Logo"
-              name="Flowbite"
+              src=""
+              // alt=" Logo"
+              name="CloudChamp Logo"
             />
           </div>
         </div>
