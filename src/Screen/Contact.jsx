@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-
+import Particles from "@/components/magicui/particles";
 function Contact() {
   const form = useRef();
   const [formData, setFormData] = useState({
@@ -43,8 +43,15 @@ function Contact() {
 
   return (
     <div className="w-screen md:h-screen h-fit flex flex-col lg:flex-row bg-black text-white p-4">
+      <Particles
+        className="absolute inset-0 z-10"
+        quantity={150}
+        ease={20}
+        color={"#ffffff"}
+        refresh
+      />
       {/* Left Section */}
-      <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center">
+      <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center z-50">
         <div className="h-fit w-fit flex flex-col gap-10">
           <p className="text-3xl lg:text-6xl font-semibold text-center lg:text-start">
             Let's Have a Talk
@@ -96,7 +103,7 @@ function Contact() {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="p-2 text-black"
+                className="p-2 text-white z-50"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -107,7 +114,7 @@ function Contact() {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="p-2 text-black"
+                className="p-2 text-white z-50"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -117,14 +124,14 @@ function Contact() {
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
-                className="p-2 text-black"
+                className="p-2 text-white z-50"
               />
             </div>
             <div className="w-full h-fit mt-4">
               <ShimmerButton
                 background={"#ffffff"}
                 shimmerColor={"#000000"}
-                className="w-full text-black tracking-widest"
+                className="w-full text-black tracking-widest z-50"
                 borderRadius={"10px"}
               >
                 Submit
