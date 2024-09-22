@@ -8,7 +8,7 @@ export const useInView = (ref) => {
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.2 } // Adjust this value to control when the animation triggers
+      { threshold: 0.01 } // Adjust this value to control when the animation triggers
     );
 
     if (ref.current) {
