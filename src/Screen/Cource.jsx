@@ -5,6 +5,7 @@ import Particles from "@/components/magicui/particles";
 import Card from "Components/Card";
 import { images } from "Images/Images";
 import { motion, AnimatePresence } from "framer-motion"; // Import AnimatePresence
+import BlurFade from "@/components/magicui/blur-fade";
 
 function Cource() {
   const [cource, setCource] = React.useState("FREE");
@@ -100,25 +101,27 @@ function Cource() {
             className="flex items-center h-full w-full gap-5 justify-evenly flex-wrap mt-10"
           >
             {cardData[cource]?.map((card, index) => (
-              <motion.div
-                key={index}
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 200, // Adjust the stiffness for a stronger spring
-                  damping: 15, // Adjust damping for more or less bounciness
-                  delay: index * 0.3,
-                }}
-              >
-                <Card
-                  image={card.image}
-                  heading={card.heading}
-                  text={card.text}
-                  buttontext={card.buttontext}
-                  price={card.price}
-                />
-              </motion.div>
+              <BlurFade inView>
+                <motion.div
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 200, // Adjust the stiffness for a stronger spring
+                    damping: 15, // Adjust damping for more or less bounciness
+                    delay: index * 0.3,
+                  }}
+                  key={index}
+                >
+                  <Card
+                    image={card.image}
+                    heading={card.heading}
+                    text={card.text}
+                    buttontext={card.buttontext}
+                    price={card.price}
+                  />
+                </motion.div>
+              </BlurFade>
             ))}
           </motion.div>
         </AnimatePresence>
