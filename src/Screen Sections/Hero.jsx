@@ -6,6 +6,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { useInView } from "../UI/UseInView";
 import Meteors from "@/components/magicui/meteors";
 import { isBrowser } from "react-device-detect";
+import { MagicCard } from "@/components/magicui/magic-card";
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -111,14 +112,16 @@ const SocialsBlock = () => (
         <p className="italic font-medium">Contact Us</p>
       </a>
     </Block>
-
     {/* Bottom row with 2 big boxes */}
-    <Block className="col-span-12 md:col-span-6 row-span-10 bg-white shadow-lg p-0">
+    <Block
+      gradientColor={"#D9D9D955"}
+      className="col-span-12 md:col-span-6 row-span-10 bg-white shadow-lg p-0 text-center "
+    >
       <a
         href="/contact"
-        className="grid h-full place-content-center text-lg md:text-3xl  text-black"
+        className="flex items-center justify-center text-center w-full h-full place-content-center text-lg md:text-3xl text-black"
       >
-        <p className="italic font-medium">Contact Us</p>
+        <p className="italic font-medium w-full text-center">Contact Us</p>
       </a>
     </Block>
   </>
